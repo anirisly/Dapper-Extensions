@@ -40,12 +40,12 @@ namespace DapperExtensions.Test.IntegrationTests.MySql
 
         public string ReadScriptFile(string name)
         {
-            string fileName = GetType().Namespace + ".Sql." + name + ".sql";
-            using (Stream s = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(fileName))
-            using (StreamReader sr = new StreamReader(s))
-            {
-                return sr.ReadToEnd();
-            }
+            string fileName = "IntegrationTests/MySql/Sql/" + name + ".sql";
+            using (Stream s = File.OpenRead(fileName))
+                using (StreamReader sr = new StreamReader(s))
+                {
+                    return sr.ReadToEnd();
+                }
         }
     }
 }
