@@ -1,16 +1,17 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DapperExtensions.Test")]
+[assembly: AssemblyTitle("DapperExtensionsOld")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("DapperExtensions.Test")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2011")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("DapperExtensionsOld")]
+[assembly: AssemblyCopyright("Copyright © 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +21,10 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("dd26e2d8-de5d-4e45-9364-1d6f4e5c10b3")]
+[assembly: Guid("792b61ca-432b-4db2-a5b3-d2fb5043d0ed")]
+
+[assembly: InternalsVisibleTo("DapperExtensionsOld.Test")]
+[assembly: InternalsVisibleTo("DapperExtensionsOld.Test.SQLite")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,5 +36,8 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.6.3.0")]
+[assembly: AssemblyFileVersion("1.6.3.0")]
+[assembly: AssemblyInformationalVersion("1.6.3")]
+
+[assembly: CLSCompliant(true)]
