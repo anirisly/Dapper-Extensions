@@ -1,15 +1,15 @@
-﻿using Dapper;
-using DapperExtensions.Mapper;
-using DapperExtensions.Sql;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Dynamic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using Dapper;
+using DapperExtensions.Mapper;
+using DapperExtensions.Sql;
 
-namespace DapperExtensions
+namespace DapperExtensions.Async
 {
     /// <summary>
     /// 

@@ -19,7 +19,7 @@ namespace DapperExtensions
         
         /// <summary>
         /// Gets or sets the default class mapper to use when generating class maps. If not specified, AutoClassMapper<T> is used.
-        /// DapperExtensionsOld.Configure(Type, IList<Assembly>, ISqlDialect) can be used instead to set all values at once
+        /// DapperExtensions.Configure(Type, IList<Assembly>, ISqlDialect) can be used instead to set all values at once
         /// </summary>
         public static Type DefaultMapper
         {
@@ -109,7 +109,7 @@ namespace DapperExtensions
         }
 
         /// <summary>
-        /// Configure DapperExtensionsOld extension methods.
+        /// Configure DapperExtensions extension methods.
         /// </summary>
         /// <param name="defaultMapper"></param>
         /// <param name="mappingAssemblies"></param>
@@ -121,7 +121,7 @@ namespace DapperExtensions
         }
 
         /// <summary>
-        /// Configure DapperExtensionsOld extension methods.
+        /// Configure DapperExtensions extension methods.
         /// </summary>
         /// <param name="defaultMapper"></param>
         /// <param name="mappingAssemblies"></param>

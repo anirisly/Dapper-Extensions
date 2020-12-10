@@ -1,12 +1,12 @@
-﻿using DapperExtensions.Mapper;
-using DapperExtensions.Sql;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
 using System.Threading.Tasks;
+using DapperExtensions.Mapper;
+using DapperExtensions.Sql;
 
-namespace DapperExtensions
+namespace DapperExtensions.Async
 {
     public static class DapperAsyncExtensions
     {
