@@ -2,6 +2,7 @@
 using System.Data;
 using DapperExtensions.Mapper;
 using DapperExtensions.Sql;
+using DapperExtensions.Test.SQLite.Helpers;
 using NUnit.Framework;
 
 namespace DapperExtensions.Test.Helpers
@@ -9,7 +10,7 @@ namespace DapperExtensions.Test.Helpers
     public class DatabaseConnection
     {
         protected IDbConnection Connection;
-        protected DapperExtensions.IDapperExtensionsImpl Impl;
+        protected IDapperImplementor Impl;
 
         [SetUp]
         public virtual void Setup()
@@ -17,7 +18,7 @@ namespace DapperExtensions.Test.Helpers
             string databaseName = string.Format("db_{0}.s3db", Guid.NewGuid().ToString());
             TestHelpers.LoadDatabase(databaseName);
             Connection = TestHelpers.GetConnection(databaseName);
-            Impl = new DapperExtensions.DapperExtensionsImpl(typeof(AutoClassMapper<>), TestHelpers.GetGenerator());
+            Impl = new DapperImplementor(TestHelpers.GetGenerator());
         }
 
         [TearDown]

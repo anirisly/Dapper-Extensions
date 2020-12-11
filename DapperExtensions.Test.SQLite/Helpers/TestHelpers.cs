@@ -1,16 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
+using System.Reflection;
 using System.Threading;
+using DapperExtensions.Mapper;
 using DapperExtensions.Sql;
 
-namespace DapperExtensions.Test.Helpers
+namespace DapperExtensions.Test.SQLite.Helpers
 {
     public static class TestHelpers
     {
         public static SqlGeneratorImpl GetGenerator()
         {
-            return new SqlGeneratorImpl(new SqliteDialect());
+            return new SqlGeneratorImpl(new DapperExtensionsConfiguration(
+                typeof(AutoClassMapper<>), 
+                new List<Assembly>(), 
+                new SqliteDialect()));
         }
 
         public static SQLiteConnection GetConnection(string databaseName)

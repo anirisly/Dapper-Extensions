@@ -16,7 +16,7 @@ namespace DapperExtensions.Test.IntegrationTests.Oracle
         [SetUp]
         public virtual void Setup()
         {
-            var connection = new OracleConnection("Data Source=localhost/xe; User Id=xe; Password=xe;");
+            var connection = new OracleConnection("Data Source=localhost:49161; User Id=system; Password=oracle;");
             var config = new DapperExtensionsConfiguration(typeof(AutoClassMapper<>), new List<Assembly>(), new OracleDialect());
             var sqlGenerator = new SqlGeneratorImpl(config);
             Db = new Database(connection, sqlGenerator);
@@ -35,12 +35,12 @@ namespace DapperExtensions.Test.IntegrationTests.Oracle
 
         public string ReadScriptFile(string name)
         {
-            string fileName = GetType().Namespace + ".Sql." + name + ".sql";
-            using (Stream s = Assembly.GetExecutingAssembly().GetManifestResourceStream(fileName))
-            using (StreamReader sr = new StreamReader(s))
-            {
-                return sr.ReadToEnd();
-            }
+            string fileName = "IntegrationTests/Oracle/Sql/" + name + ".sql";
+            using (Stream s = File.OpenRead(fileName))
+                using (StreamReader sr = new StreamReader(s))
+                {
+                    return sr.ReadToEnd();
+                }
         }
     }
 }

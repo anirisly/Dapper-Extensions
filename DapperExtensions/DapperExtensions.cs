@@ -36,7 +36,7 @@ namespace DapperExtensions
 
         /// <summary>
         /// Gets or sets the type of sql to be generated.
-        /// DapperExtensions.Configure(Type, IList<Assembly>, ISqlDialect) can be used instead to set all values at once
+        /// DapperExtensionsOld.Configure(Type, IList<Assembly>, ISqlDialect) can be used instead to set all values at once
         /// </summary>
         public static ISqlDialect SqlDialect
         {
