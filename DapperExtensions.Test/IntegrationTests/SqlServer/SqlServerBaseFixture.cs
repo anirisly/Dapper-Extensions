@@ -19,7 +19,7 @@ namespace DapperExtensions.Test.IntegrationTests.SqlServer
         [SetUp]
         public virtual void Setup()
         {
-            var connection = new SqlConnection("Data Source=.;Initial Catalog=dapperTest;Integrated security=True;");
+            var connection = new SqlConnection("Server=localhost;Database=dapperTest;User Id=dapperTest;Password=dapperTest!.1;");
             var config = new DapperExtensionsConfiguration(typeof(AutoClassMapper<>), new List<Assembly>(), new SqlServerDialect());
             var sqlGenerator = new SqlGeneratorImpl(config);
             Db = new Database(connection, sqlGenerator);
@@ -40,12 +40,12 @@ namespace DapperExtensions.Test.IntegrationTests.SqlServer
 
         public string ReadScriptFile(string name)
         {
-            string fileName = GetType().Namespace + ".Sql." + name + ".sql";
-            using (Stream s = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(fileName))
-            using (StreamReader sr = new StreamReader(s))
-            {
-                return sr.ReadToEnd();
-            }
+            string fileName = "IntegrationTests/SqlServer/Sql/" + name + ".sql";
+            using (Stream s = File.OpenRead(fileName))
+                using (StreamReader sr = new StreamReader(s))
+                {
+                    return sr.ReadToEnd();
+                }
         }
     }
 }

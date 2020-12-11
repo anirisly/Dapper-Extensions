@@ -52,6 +52,21 @@
     <None Update="IntegrationTests\MySql\Sql\CreatePersonTable.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="IntegrationTests\SqlServer\Sql\CreateAnimalTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="IntegrationTests\SqlServer\Sql\CreateCarTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="IntegrationTests\SqlServer\Sql\CreateFooTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="IntegrationTests\SqlServer\Sql\CreateMultikeyTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="IntegrationTests\SqlServer\Sql\CreatePersonTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
