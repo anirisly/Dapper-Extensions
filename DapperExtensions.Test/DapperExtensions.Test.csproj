@@ -10,13 +10,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="IBM.Data.DB2" Version="10.0.5.5" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.3" />
     <PackageReference Include="Microsoft.SqlServer.Compact" Version="4.0.8876.1" />
     <PackageReference Include="Moq" Version="4.15.2" />
     <PackageReference Include="MySql.Data" Version="8.0.22" />
     <PackageReference Include="NUnit" Version="3.12.0" />
-    <PackageReference Include="odp.net.managed" Version="121.1.2" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.19.100" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.113.6" />
   </ItemGroup>
@@ -65,6 +64,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="IntegrationTests\SqlServer\Sql\CreatePersonTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="IntegrationTests\Oracle\Sql\CreateAnimalTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="IntegrationTests\Oracle\Sql\CreateCarTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="IntegrationTests\Oracle\Sql\CreatePersonTable.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
